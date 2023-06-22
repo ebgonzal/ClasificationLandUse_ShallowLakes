@@ -1,0 +1,11 @@
+Corrección rayleigh imagenes (1C) de Sentinel-2A
+*Las imagenes anteriores a Sentinel-2B (2015-2017) no están disponibles corregidas atmosfericamente.
+
+Para correr por consola todas las imagenes descargadas seguir los siguientes pasos:
+-Bajar Sen2Cor (https://step.esa.int/main/snap-supported-plugins/sen2cor/)
+-Abrir command prompt de Windows
+-Buscar carpeta donde se guardó Sen2Cor (cd Sen2cor.02.09.win64)
+-Correr alli el archivo L2A_Process.bat (path de la carpeta .SAFE donde esta la imagen)
+-Para correr en bath todas las imagenes que estan en una carpeta escribir: for/d%s in ("path"\*.SAFE) do L2A_Process.bat%s
+
+

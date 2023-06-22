@@ -1,0 +1,39 @@
+<graph id="Graph">
+  <version>1.0</version> 
+  <node id="Resample">
+    <operator>Resample</operator>
+    <sources>
+	  <sourceProduct>${sourceProduct}</sourceProduct>	    
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <referenceBand/>
+      <targetWidth/>
+      <targetHeight/>
+      <targetResolution>10</targetResolution>
+      <upsampling>Nearest</upsampling>
+      <downsampling>First</downsampling>
+      <flagDownsampling>First</flagDownsampling>
+      <resamplingPreset/>
+      <bandResamplings/>
+      <resampleOnPyramidLevels>true</resampleOnPyramidLevels>
+    </parameters>
+  </node>
+  <node id="Subset">
+     <operator>Subset</operator>
+     <sources>
+        <sourceProduct>Resample</sourceProduct>        
+     </sources>
+     <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+       <sourceBands>B2,B3,B4,B5,B6,B7,B8,B8A,B11,B12</sourceBands>
+       <geoRegion>POLYGON((-57.482747665137936 -37.58352526850968,-57.37975083896606 -37.58352526850968,-57.37975083896606 -37.66347124206258,-57.482747665137936 -37.66347124206258,-57.482747665137936 -37.58352526850968))</geoRegion>
+       <subSamplingX>1</subSamplingX>
+       <subSamplingY>1</subSamplingY>
+       <fullSwath>false</fullSwath>
+       <tiePointGridNames/>
+       <copyMetadata>true</copyMetadata>
+     </parameters>
+   </node>  
+ </graph>
+
+
+ 
